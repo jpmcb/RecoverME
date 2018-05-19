@@ -1,0 +1,32 @@
+{
+  "name": "recoverme",
+  "version": "1.0.0",
+  "description": "As part of cs 361, the RecoverME application implementation",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpmcb/RecoverME.git"
+  },
+  "keywords": [
+    "OSU",
+    "Software",
+    "Engineering",
+    "361"
+  ],
+  "author": "CS 361, spring 2018 group 19",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpmcb/RecoverME/issues"
+  },
+  "homepage": "https://github.com/jpmcb/RecoverME#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11"
+  }
+}
