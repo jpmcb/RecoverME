@@ -4,7 +4,7 @@
   "description": "As part of cs 361, the RecoverME application implementation",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js",
+    "test": "node tests.js",
     "start": "node server.js"
   },
   "repository": {
