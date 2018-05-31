@@ -1,9 +1,17 @@
+// CS 361 - Software engineering
+// RecoverME 
+// ---------
+// Description: Unit testing file
+//      Gets executed by the Travis CI integrated testing API
+
 var assert = require('assert');
 
+// Simple addition function
 function addTwo(x, y){
     return x + y;
 }
 
+// Simple unit test for the addition function
 function testAddTwo(){
     var x = 5;
     var y = 1; 
@@ -20,4 +28,5 @@ function testAddTwo(){
     }
 }
 
+// Initiate the addition function
 testAddTwo();

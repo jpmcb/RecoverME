@@ -20,3 +20,18 @@ CS 361 - Basic implementation and skeleton for the RecoverME application
 1. Install the module using `npm install <MODULE NAME>`
 2. `require` the node module in server.js
 3. Use the various modules components
+
+## Integrated Testing 
+1. Ensure that you `export` your node module so that your funcitons are reachable. Import your module into `test.js`
+2. Add tests to the `tests.js` file with some kind of function calling your imported methods / functions
+3. Place some kind of try / assert / catch block like so:
+```
+try{
+    assert.equal(sum1, sum2);
+    console.log('Passed.');
+} catch (error) {
+    console.error('Failed.');
+}
+```
+If an error is thrown, this will cause the integrated tests to fail!
+4. Call your testing function at the end of tests.js

@@ -3,6 +3,7 @@
 // ---------
 // Description: Node JS entry point
 
+
 // Include the needed middleware
 var express = require('express');
 var handlebars = require('express-handlebars').create({defaultLayout: 'main'});
@@ -31,6 +32,7 @@ app.get('/', function(req, res){
     // Send to the home page
     res.render('home');
 });
+
 
 // -------------------------
 // --- Server functions ----
