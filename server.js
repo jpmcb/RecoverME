@@ -33,6 +33,28 @@ app.get('/', function(req, res){
     res.render('home');
 });
 
+app.get('/home', function(req, res){
+    res.render('home');
+});
+
+app.get('/survey', function(req, res){
+    res.render('survey');
+});
+
+app.post('/survey', function(req, res){
+    console.log(req.body);
+
+    // var payload = {};
+    // var params = [];
+    
+
+
+    // console.log(params);
+
+    // payload.results = params;
+
+    res.render('survey', req.body);
+})
 
 // -------------------------
 // --- Server functions ----

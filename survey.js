@@ -8,7 +8,7 @@
 //      questionList = an array of Question objects
 //      userId = identifier to store results of each user
 //-----------------------------------------------------------------------------
-class Survey {
+export class Survey {
     constructor(questions, userId) {
         this.questionList = questions;
         this.userId = userId;
@@ -22,10 +22,17 @@ class Survey {
         return this.userId;
     }
 
-    // send results to backend/DB
-    logResults() {
-        // TODO
+    toJSON() {
+        return {
+          questionList: this.questionList,
+          userId:  this.userId,
+        };
     }
+
+    static fromJSON(obj) {
+        return new this(obj);
+    }
+   
 }
 
 //-----------------------------------------------------------------------------
@@ -35,7 +42,7 @@ class Survey {
 //                      answering the question.
 //      usrAnswer = the answer the user chose
 //-----------------------------------------------------------------------------
-class Question {
+export class Question {
     constructor(qtext, answers){
         this.text = qtext;
         this.answerOptions = answers;
@@ -70,7 +77,21 @@ class Question {
             throw("Error: Invalid answer for this question. Try again.");
         }
     }
+
+    toJSON() {
+        return {
+          text: this.text,
+          answerOptions:  this.answerOptions,
+          usrAnswer: this.usrAnswer,
+        };
+    }
+    
+    static fromJSON(obj) {
+        return new this(obj);
+    }
 }
+
+// Need to call JSON.stringify() on an instance of the class
 
 module.exports  = {
     Survey,
